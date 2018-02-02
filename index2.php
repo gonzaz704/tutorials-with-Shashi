@@ -27,6 +27,11 @@ class Papers {
 		echo $this->author;
 	}
 
+
+
+
+	
+
 	function setpublication($publication){
 		$this->publication = $publication;
 	}
