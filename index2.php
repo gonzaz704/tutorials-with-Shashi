@@ -15,6 +15,7 @@ class Papers {
 
 	function setlink($link){
 		$this->link = $link;
+		//$this->link is the member variable and we use  -> to assign the data to this member variable
 	}
 	function getlink(){
 		echo $this->link;
@@ -33,50 +34,59 @@ class Papers {
 		echo $this->publication;
 	}
 }
+$papers = []; //empty array
 
-	$paper1 = new Papers(); 
+	$papers[0] = new Papers();  //first element
 
-	$paper1-> settitle ('Historia de Egipto')	
-	$paper1-> setlink ('historiadeegipto.com')
-	$paper1-> setauthor ('Diego')
-	$paper1-> setpublication ('Historia')
+	$papers[0]-> settitle ('Historia de Egipto');
+	$papers[0]-> setlink ('historiadeegipto.com');
+	$papers[0]-> setauthor ('Diego');
+	$papers[0]-> setpublication ('Historia');
 	
 
-$paper2 = new Papers(); 
+ $papers[1] = new Papers(); //second element
 
-	$paper2-> settitle ('Quimica para principiantes')	
-	$paper2-> setlink ('quimica.com')
-	$paper2-> setauthor ('Martin')
-	$paper2-> setpublication ('Quimica')
-
-
-$paper3 = new Papers(); 
-
-	$paper3-> settitle ('Fisica para Expertos')	
-	$paper3-> setlink ('fisica.com')
-	$paper3-> setauthor ('Juan')
-	$paper3-> setpublication ('Fisica')
+	$papers[1]-> settitle ('Quimica para principiantes');	
+	$papers[1]-> setlink ('quimica.com');
+	$papers[1]-> setauthor ('Martin');
+	$papers[1]-> setpublication ('Quimica');
 
 
-$paper4 = new Papers(); 
-
-	$paper4-> settitle ('Matematica para intermedios')	
-	$paper4-> setlink ('Matematica.com')
-	$paper4-> setauthor ('Luis')
-	$paper4-> setpublication ('Matematica')
-
-
-$paper5 = new Papers(); 
-
-	$paper5-> settitle ('Programacion 1')	
-	$paper5-> setlink ('Programacion.com')
-	$paper5-> setauthor ('Gonzalo')
-	$paper5-> setpublication ('Programacion')
+$papers[2] = new Papers(); //third elemnet 
+//we use -> to access the member functions of the object of the class; Here $papers[2] stores the object of Paper Class
+	$papers[2]-> settitle ('Fisica para Expertos');	
+	$papers[2]-> setlink ('fisica.com');
+	$papers[2]-> setauthor ('Juan');
+	$papers[2]-> setpublication ('Fisica');
 
 
+$papers[3] = new Papers(); 
 
+	$papers[3]-> settitle ('Matematica para intermedios');	
+	$papers[3]-> setlink ('Matematica.com');
+	$papers[3]-> setauthor ('Luis');
+	$papers[3]-> setpublication ('Matematica');
+
+
+$papers[4] = new Papers(); 
+
+	$papers[4]-> settitle ('Programacion 1');	
+	$papers[4]-> setlink ('Programacion.com');
+	$papers[4]-> setauthor ('Gonzalo');
+	$papers[4]-> setpublication ('Programacion');
+//5 elements in a array; the scope of the paper variable is within the forloop only
+foreach($papers as $paper){
+	//create a variable $paper and assign the element
+	$paper->gettitle();
+	$paper->getlink();
+	$paper->getauthor();
+	$paper->getpublication();
+
+	//destroy it here
+}
+//for loop
 	
-	$paper1->gettitle();
+	/*$paper1->gettitle();
 	$paper1->getlink();
 	$paper1->getauthor();
 	$paper1->getpublication();
@@ -100,9 +110,9 @@ $paper5 = new Papers();
 	$paper5->gettitle();
 	$paper5->getlink();
 	$paper5->getauthor();
-	$paper5->getpublication();
+	$paper5->getpublication();*/
 
-
+//I can access the $papers variable till here.
 	?>
 
 
